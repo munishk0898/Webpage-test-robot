@@ -1,0 +1,7 @@
+[
+  "tests/login_test.py::test_is_url_reachable",
+  "tests/login_test.py::test_login",
+  "tests/login_test.py::test_login_with_wrong_user_name",
+  "tests/login_test.py::test_login_with_wrong_password",
+  "tests/login_test.py::test_login_with_empty_inputs"
+]

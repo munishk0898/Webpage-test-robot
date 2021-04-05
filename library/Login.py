@@ -6,6 +6,8 @@ USERNAME_INPUT = (By.NAME, 'txtUsername')
 PASSWORD_INPUT = (By.NAME, 'txtPassword')
 FORGOT_PASSWORD = (By.ID, 'forgotPasswordLink')
 LOGIN_BUTTON = (By.NAME, 'Submit')
+ERROR_MESSAGE = (By.ID, 'spanMessage')
+
 
 def is_url_reachable():
     D.driver.get("https://www.phptravels.net/admin")
@@ -20,6 +22,19 @@ def web_login(user):
     D.driver.find_element(*LOGIN_BUTTON).click()
     time.sleep(5)
     return True
+
+
+def expect_wrong_login_message():
+    message = D.driver.find_element(*ERROR_MESSAGE)
+    if message:
+        print("Expected Error message: ", message.text)
+        return message.text
+    else:
+        raise Exception("Error Message not found")
+
+
+def get_current_url():
+    return D.driver.current_url
 
 
 def current_driver_title():
