@@ -10,7 +10,7 @@ ERROR_MESSAGE = (By.ID, 'spanMessage')
 
 
 def is_url_reachable():
-    D.driver.get("https://www.phptravels.net/admin")
+    D.driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
     return D.driver.title
 
 

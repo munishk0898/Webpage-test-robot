@@ -3,5 +3,12 @@
   "tests/login_test.py::test_login",
   "tests/login_test.py::test_login_with_wrong_user_name",
   "tests/login_test.py::test_login_with_wrong_password",
-  "tests/login_test.py::test_login_with_empty_inputs"
+  "tests/login_test.py::test_login_with_empty_inputs",
+  "tests/test_add_user.py::test_user_add",
+  "tests/test_add_user.py::test_user_navigation",
+  "tests/test_add_user.py::test_search_add",
+  "tests/test_dashboard.py::test_user_navigation",
+  "tests/test_dashboard.py::test_job_navigation",
+  "tests/test_dashboard.py::test_user_dropdown",
+  "tests/test_dashboard.py::test_job_dropdown"
 ]
