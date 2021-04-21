@@ -1,4 +1,4 @@
-login_url = 'https://opensource-demo.orangehrmlive.com/index.php/auth/login'
+LOGIN_URL = 'https://opensource-demo.orangehrmlive.com/index.php/auth/login'
 dashboard_url = 'https://opensource-demo.orangehrmlive.com/index.php/dashboard'
 login_credentials = ('Admin', 'admin123')
 Dashboard_title = 'OrangeHRM'
@@ -11,4 +11,4 @@ TEST_USER = ('Munish', 'Admin', 'MuniyappanK', 'All')
 SUCCESS_MESSAGE = ""
 ERROR_MESSAGE = ""
 USERS_DROPDOWN = ['Users']
-# JOB_DROPDOWN
+JOB_DROPDOWN = ['Job Titles', 'Pay Grades', 'Employment Status', 'Job Categories', 'Work Shifts']

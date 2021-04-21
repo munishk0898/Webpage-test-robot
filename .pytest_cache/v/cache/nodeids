@@ -10,5 +10,12 @@
   "tests/test_dashboard.py::test_user_navigation",
   "tests/test_dashboard.py::test_job_navigation",
   "tests/test_dashboard.py::test_user_dropdown",
-  "tests/test_dashboard.py::test_job_dropdown"
+  "tests/test_dashboard.py::test_job_dropdown",
+  "tests/test_users.py::test_search_add",
+  "tests/test_dashboard.py::test_organization_navigation",
+  "tests/test_dashboard.py::test_organization_dropdown",
+  "tests/test_dashboard.py::test_qualification_navigation",
+  "tests/test_dashboard.py::test_qualification_dropdown",
+  "tests/test_dashboard.py::test_configuration_navigation",
+  "tests/test_dashboard.py::test_configuration_dropdown"
 ]
