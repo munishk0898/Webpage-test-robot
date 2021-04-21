@@ -2,7 +2,7 @@ from data import Webpage_elements as data
 import pytest
 import library.Driver as D
 from library import Login
-from library import admin
+from library.Admin import admin
 
 
 def setup():
