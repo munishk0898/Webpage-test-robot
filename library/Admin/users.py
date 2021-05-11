@@ -84,15 +84,16 @@ def add_user(user_info):
                 page.click_element(SAVE)
                 return True
             else:
-                logging.info("Password and confirm password fields has different elements for "+user_info)
+                logging.info("Password and confirm password fields has different elements for " + user_info)
                 return False
     else:
         logging.error("The input information provided for user creation doesn't have enough fields")
         return False
 
+
 def search_user(user_details):
     D.driver.find_element(*SEARCH_USER_NAME).send_keys(user_details[0])
-    page.click_element(SEARCH_USER_ROLE)"systemUser_userType
+    page.click_element(SEARCH_USER_ROLE)
     page.select_by_text(SEARCH_USER_ROLE, user_details[1])
     D.driver.find_element(*SEARCH_EMPLOYEE_NAME).send_keys(user_details[2])
     page.select_by_text(STATUS_SEARCH, user_details[3])
