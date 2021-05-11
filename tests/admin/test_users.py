@@ -18,7 +18,7 @@ def test_add_user():
 
 
 def test_search_user():
-    assert Login.web_login(data.LOGIN_CREDENTIALS)
+    Login.web_login(data.LOGIN_CREDENTIALS)
     assert Login.current_driver_title() == data.DASHBOARD_TITLE
     assert admin.navigate_to_users()
     assert users.search_user(data.TEST_USER) == data.SUCCESS_MESSAGE
