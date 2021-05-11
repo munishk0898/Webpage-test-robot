@@ -10,8 +10,8 @@ def setup():
 
 
 def test_search_add():
-    assert Login.web_login(data.login_credentials)
-    assert Login.current_driver_title() == data.Dashboard_title
+    assert Login.web_login(data.LOGIN_CREDENTIALS)
+    assert Login.current_driver_title() == data.DASHBOARD_TITLE
     assert admin.navigate_to_users()
     assert admin.search_user(data.TEST_USER) == data.SUCCESS_MESSAGE
 
