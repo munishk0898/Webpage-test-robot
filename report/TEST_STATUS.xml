@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="CHN-LAP-MUNIYAP" name="pytest" skipped="0" tests="16" time="430.506" timestamp="2021-04-21T11:23:58.621969"><testcase classname="tests.login_test" file="tests\login_test.py" line="11" name="test_is_url_reachable" time="18.415"></testcase><testcase classname="tests.login_test" file="tests\login_test.py" line="15" name="test_login" time="35.219"></testcase><testcase classname="tests.login_test" file="tests\login_test.py" line="20" name="test_login_with_wrong_user_name" time="21.881"></testcase><testcase classname="tests.login_test" file="tests\login_test.py" line="26" name="test_login_with_wrong_password" time="21.126"></testcase><testcase classname="tests.login_test" file="tests\login_test.py" line="32" name="test_login_with_empty_inputs" time="17.261"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="11" name="test_user_navigation" time="26.954"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="17" name="test_user_dropdown" time="27.936"><failure message="AssertionError: assert [&apos;&apos;] == [&apos;Users&apos;]
+  At index 0 diff: &apos;&apos; != &apos;Users&apos;
+  Full diff:
+  - [&apos;Users&apos;]
+  + [&apos;&apos;]">def test_user_dropdown():
+        Login.web_login(data.LOGIN_CREDENTIALS)
+        assert Login.current_driver_title() == data.DASHBOARD_TITLE
+&gt;       assert admin.get_users_dropdown() == data.USERS_DROPDOWN
+E       AssertionError: assert [&apos;&apos;] == [&apos;Users&apos;]
+E         At index 0 diff: &apos;&apos; != &apos;Users&apos;
+E         Full diff:
+E         - [&apos;Users&apos;]
+E         + [&apos;&apos;]
+
+tests\test_dashboard.py:21: AssertionError</failure></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="23" name="test_job_navigation" time="25.492"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="29" name="test_job_dropdown" time="27.192"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="35" name="test_organization_navigation" time="30.835"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="41" name="test_organization_dropdown" time="27.505"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="47" name="test_qualification_navigation" time="30.585"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="53" name="test_qualification_dropdown" time="34.191"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="59" name="test_configuration_navigation" time="26.143"></testcase><testcase classname="tests.test_dashboard" file="tests\test_dashboard.py" line="65" name="test_configuration_dropdown" time="29.394"></testcase><testcase classname="tests.test_users" file="tests\test_users.py" line="11" name="test_search_add" time="29.736"><failure message="AssertionError: assert None
+ +  where None = &lt;function web_login at 0x0000016A37A12B80&gt;((&apos;Admin&apos;, &apos;admin123&apos;))
+ +    where &lt;function web_login at 0x0000016A37A12B80&gt; = Login.web_login
+ +    and   (&apos;Admin&apos;, &apos;admin123&apos;) = data.LOGIN_CREDENTIALS">def test_search_add():
+&gt;       assert Login.web_login(data.LOGIN_CREDENTIALS)
+E       AssertionError: assert None
+E        +  where None = &lt;function web_login at 0x0000016A37A12B80&gt;((&apos;Admin&apos;, &apos;admin123&apos;))
+E        +    where &lt;function web_login at 0x0000016A37A12B80&gt; = Login.web_login
+E        +    and   (&apos;Admin&apos;, &apos;admin123&apos;) = data.LOGIN_CREDENTIALS
+
+tests\test_users.py:13: AssertionError</failure></testcase></testsuite></testsuites>

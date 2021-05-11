@@ -36,4 +36,5 @@ def get_list_text(elements):
             list_text_elements.append(i.text)
         return list_text_elements
     else:
+        logging.info("No list elements found")
         return []
