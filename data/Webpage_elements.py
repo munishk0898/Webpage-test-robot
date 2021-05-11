@@ -17,4 +17,8 @@ ORGANIZATION_DROPDOWN = ['Email Configuration', 'Email Subscriptions', 'Localiza
 QUALIFICATION_DROPDOWN = ['Skills', 'Education', 'Licenses', 'Languages', 'Memberships']
 CONFIGURATION_DROPDOWN = ['Email Configuration', 'Email Subscriptions', 'Localization', 'Language Packages',
                           'Modules', 'Social Media Authentication', 'Register OAuth Client']
-PIM_CONFIGURATION_DROPDOWN = ['Optional Fields', 'Custom Fields', 'Data Import', 'Reporting Methods', 'Termination Reasons']
+PIM_CONFIGURATION_DROPDOWN = ['Optional Fields', 'Custom Fields', 'Data Import', 'Reporting Methods',
+                              'Termination Reasons']
+TEST_USER_FOR_ADD = ['ESS', 'test_user', 'user1', 'Enabled', 'test_user', 'test_user']
+USER_WITH_WRONG_STATUS = ['ESS', 'test_user', 'user1', 'NOT DETERMINED', 'test_user', 'test_user']
+USER_WITH_WRONG_ROLE = ['PSS', 'test_user', 'user1', 'Enabled', 'test_user', 'test_user']
