@@ -1,4 +1,0 @@
-2021-05-11 19:24:47 [    INFO] (Login.py:16) The Url is reachable
-2021-05-11 19:25:44 [    INFO] (Login.py:34) Expected Error message: Invalid credentials
-2021-05-11 19:26:04 [    INFO] (Login.py:34) Expected Error message: Invalid credentials
-2021-05-11 19:26:25 [    INFO] (Login.py:34) Expected Error message: Username cannot be empty

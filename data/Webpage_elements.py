@@ -22,3 +22,7 @@ PIM_CONFIGURATION_DROPDOWN = ['Optional Fields', 'Custom Fields', 'Data Import',
 TEST_USER_FOR_ADD = ['ESS', 'test_user', 'user1', 'Enabled', 'test_user', 'test_user']
 USER_WITH_WRONG_STATUS = ['ESS', 'test_user', 'user1', 'NOT DETERMINED', 'test_user', 'test_user']
 USER_WITH_WRONG_ROLE = ['PSS', 'test_user', 'user1', 'Enabled', 'test_user', 'test_user']
+LEAVE_ENTITLEMENTS_LIST = ['Add Entitlements', 'Employee Entitlements', 'My Entitlements']
+LEAVE_REPORT_LIST = ['Leave Entitlements and Usage Report', 'My Leave Entitlements and Usage Report']
+LEAVE_CONFIGURE_LIST = ['Leave Period', 'Leave Types', 'Work Week', 'Holidays']
+TIME_LIST = ['Timesheets', 'Attendance', 'Reports', 'Project Info']
