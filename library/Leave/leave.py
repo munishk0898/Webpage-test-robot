@@ -1,8 +1,12 @@
-import time
+"""
+This script has methods to navigate
+the elements and get the dropdown elements if any under
+the same elements in leave section
+"""
 import logging
 from selenium.webdriver.common.by import By
-import library.Driver as D
 from library import page
+import library.driver as D
 
 LEAVE = (By.XPATH, '//*[@id="menu_leave_viewLeaveModule"]')
 APPLY_LEAVE = (By.ID, 'menu_leave_applyLeave')
@@ -18,6 +22,10 @@ CONFIGURE_LIST = (By.XPATH, '//*[@id="menu_leave_defineLeavePeriod"]/parent::li/
 
 
 def navigate_to_apply():
+    """
+    This method is used to help to navigate apply button
+    :return: True|False
+    """
     if page.click_element(LEAVE):
         if page.click_element(APPLY_LEAVE):
             return True
@@ -30,6 +38,10 @@ def navigate_to_apply():
 
 
 def navigate_to_my_leave():
+    """
+    This method is used to help to navigate my_leave button
+    :return: True|False
+    """
     if page.click_element(LEAVE):
         if page.click_element(MY_LEAVE):
             return True
@@ -42,6 +54,10 @@ def navigate_to_my_leave():
 
 
 def navigate_to_entitlements():
+    """
+    This method is used to help to navigate entitlements button
+    :return: True|False
+    """
     if page.click_element(LEAVE):
         if page.click_element(ENTITLEMENTS):
             return True
@@ -54,6 +70,10 @@ def navigate_to_entitlements():
 
 
 def navigate_to_report():
+    """
+    This method is used to help to navigate report button
+    :return: True|False
+    """
     if page.click_element(LEAVE):
         if page.click_element(REPORTS):
             return True
@@ -66,6 +86,10 @@ def navigate_to_report():
 
 
 def navigate_to_configure():
+    """
+    This method is used to help to navigate configure button
+    :return: True|False
+    """
     if page.click_element(LEAVE):
         if page.click_element(CONFIGURE):
             return True
@@ -78,6 +102,10 @@ def navigate_to_configure():
 
 
 def navigate_to_leavelist():
+    """
+    This method is used to help to navigate leave_list button
+    :return: True|False
+    """
     if page.click_element(LEAVE):
         if page.click_element(LEAVE_LIST):
             return True
@@ -90,12 +118,67 @@ def navigate_to_leavelist():
 
 
 def navigate_to_assignleave():
+    """
+    This method is used to help to navigate assign_leave button
+    :return: True|False
+    """
     if page.click_element(LEAVE):
         if page.click_element(ASSIGN_LEAVE):
             return True
         else:
             logging.error('ASSIGN_LEAVE web element not found')
             return False
+    else:
+        logging.error('LEAVE web element not found')
+        return False
+
+
+def get_entitlement_dropdown():
+    """
+    This method gives the list of elements under the entitlement button
+    :return:
+    """
+    if page.click_element(LEAVE):
+        if page.click_element(ENTITLEMENTS):
+            elements = D.driver.find_elements(*ENTITLEMENTS_LIST)
+            return page.get_list_text(elements)
+        else:
+            logging.error('Empty list found in entitlement dropdown')
+            return []
+    else:
+        logging.error('LEAVE web element not found')
+        return False
+
+
+def get_report_dropdown():
+    """
+    This method gives the list of elements under the entitlement button
+    :return:
+    """
+    if page.click_element(LEAVE):
+        if page.click_element(REPORTS):
+            elements = D.driver.find_elements(*REPORTS_LIST)
+            return page.get_list_text(elements)
+        else:
+            logging.error('Empty list found in REPORTS dropdown')
+            return []
+    else:
+        logging.error('LEAVE web element not found')
+        return False
+
+
+def get_configure_dropdown():
+    """
+    This method gives the list of elements under the entitlement button
+    :return:
+    """
+    if page.click_element(LEAVE):
+        if page.click_element(CONFIGURE):
+            elements = D.driver.find_elements(*CONFIGURE_LIST)
+            return page.get_list_text(elements)
+        else:
+            logging.error('Empty list found in CONFIGURE dropdown')
+            return []
     else:
         logging.error('LEAVE web element not found')
         return False

@@ -1,6 +1,10 @@
+"""
+This cript holds the methods to navigate the pim elements
+and get their dropdown elements if any
+"""
 import logging
 from selenium.webdriver.common.by import By
-import library.Driver as D
+import library.driver as D
 from library import page
 
 PIM = (By.ID, 'menu_pim_viewPimModule')
@@ -12,6 +16,10 @@ CONFIGURATION_LIST = (By.XPATH, '//*[@id="menu_pim_configurePim"]/parent::li/par
 
 
 def navigate_to_configuration():
+    """
+    This method helps to navigate the configuration button
+    :return: True|False
+    """
     if page.click_element(PIM):
         if page.click_element(CONFIGURATION):
             return True
@@ -24,6 +32,10 @@ def navigate_to_configuration():
 
 
 def get_configuration_dropdown():
+    """
+    This method helps to get the list elements under configuration button
+    :return: True|False
+    """
     if page.click_element(PIM):
         if page.click_element(CONFIGURATION):
             elements = D.driver.find_elements(*CONFIGURATION_LIST)
@@ -37,6 +49,10 @@ def get_configuration_dropdown():
 
 
 def navigate_to_employee_list():
+    """
+    This method helps to navigate the employee_list button
+    :return: True|False
+    """
     if page.click_element(PIM):
         if page.click_element(EMPLOYEE_LIST):
             return True
@@ -49,6 +65,10 @@ def navigate_to_employee_list():
 
 
 def navigate_to_add_employee():
+    """
+    This method helps to navigate the add_employee_button button
+    :return: True|False
+    """
     if page.click_element(PIM):
         if page.click_element(ADD_EMPLOYEE):
             return True
@@ -61,6 +81,10 @@ def navigate_to_add_employee():
 
 
 def navigate_to_report():
+    """
+    This method helps to navigate the report button
+    :return: True|False
+    """
     if page.click_element(PIM):
         if page.click_element(REPORT):
             return True
