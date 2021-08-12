@@ -15,7 +15,7 @@ def initialize():
     driver = webdriver.Chrome()
     driver.implicitly_wait(5)
     driver.maximize_window()
-    load_url = driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login")
+    load_url = driver.get("https://opensource-demo.orangehrmlive.com")
     return load_url
 
 
