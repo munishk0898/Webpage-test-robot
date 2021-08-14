@@ -117,7 +117,9 @@ def search_user(user_details):
     page.select_by_text(SEARCH_USER_ROLE, user_details[1])
     D.driver.find_element(*SEARCH_EMPLOYEE_NAME).send_keys(user_details[2])
     page.select_by_text(STATUS_SEARCH, user_details[3])
+    D.driver.find_element(*SEARCH).click()
     if page.get_text(SEARCH):
+        print(page.get_text(SEARCH))
         return page.get_text(SEARCH)
     else:
         return ""

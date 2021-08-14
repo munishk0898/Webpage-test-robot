@@ -6,6 +6,7 @@ import library.driver as D
 from library import login
 from library.Admin import admin
 from library.Admin import users
+import time
 
 
 def setup():
@@ -25,6 +26,7 @@ def test_add_user():
     assert login.current_driver_title() == data.DASHBOARD_TITLE
     assert admin.navigate_to_users()
     assert users.add_user(data.TEST_USER_FOR_ADD)
+    time.sleep(5)
 
 
 def test_search_user():
@@ -36,6 +38,7 @@ def test_search_user():
     assert login.current_driver_title() == data.DASHBOARD_TITLE
     assert admin.navigate_to_users()
     assert users.search_user(data.TEST_USER) == data.SUCCESS_MESSAGE
+    time.sleep(5)
 
 
 def teardown():

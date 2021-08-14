@@ -26,3 +26,4 @@ LEAVE_ENTITLEMENTS_LIST = ['Add Entitlements', 'Employee Entitlements', 'My Enti
 LEAVE_REPORT_LIST = ['Leave Entitlements and Usage Report', 'My Leave Entitlements and Usage Report']
 LEAVE_CONFIGURE_LIST = ['Leave Period', 'Leave Types', 'Work Week', 'Holidays']
 TIME_LIST = ['Timesheets', 'Attendance', 'Reports', 'Project Info']
+TEST_USER_1 = ['Test_user', '1','USER_TEST','User#12345']

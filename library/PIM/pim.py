@@ -13,6 +13,13 @@ EMPLOYEE_LIST = (By.XPATH, '//*[@id="menu_pim_viewEmployeeList"]')
 ADD_EMPLOYEE = (By.ID, 'menu_pim_addEmployee')
 REPORT = (By.CSS_SELECTOR, '#menu_core_viewDefinedPredefinedReports')
 CONFIGURATION_LIST = (By.XPATH, '//*[@id="menu_pim_configurePim"]/parent::li/parent::ul/li')
+FIRST_NAME = (By.CSS_SELECTOR, '#firstName')
+LAST_NAME = (By.XPATH, '//input[@id="lastName"]')
+CHECK_BOX = (By.ID, 'chkLogin')
+USER_NAME = (By.XPATH, '//*[@id="user_name"]')
+PASSWORD = (By.CSS_SELECTOR, '#user_password')
+CONFIRM_PASSWORD = (By.NAME, 're_password')
+SAVE = (By.ID, 'btnSave')
 
 
 def navigate_to_configuration():
@@ -94,3 +101,15 @@ def navigate_to_report():
     else:
         logging.error(' REPORT web element not found')
         return False
+
+
+def add_employee(USER_DATA):
+    if page.click_element(PIM):
+        if page.click_element(ADD_EMPLOYEE):
+            D.driver.find_element(*FIRST_NAME).send_keys(USER_DATA[0])
+            D.driver.find_element(*LAST_NAME).send_keys(USER_DATA[1])
+            page.click_element(CHECK_BOX)
+            D.driver.find_element(*USER_NAME).send_keys(USER_DATA[2])
+            D.driver.find_element(*PASSWORD).send_keys(USER_DATA[3])
+            D.driver.find_element(*CONFIRM_PASSWORD).send_keys(USER_DATA[3])
+            page.click_element(SAVE)
